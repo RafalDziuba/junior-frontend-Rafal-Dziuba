@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Recruitment task - flex</title>
+</head>
+
+<body>
+    <style>
+        .parent {
+            border: 2px solid red;
+            max-width: 600px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row-reverse;
+            align-items: center;
+
+        }
+
+        .child {
+            padding: 5px;
+            margin: 10px;
+            border: 2px solid blue;
+
+
+        }
+
+        .child--1 {
+            background: yellow;
+            height: auto;
+        }
+
+        .child--2 {
+            height: 50px;
+            background: orange;
+            line-height: 32px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial';
+            position: relative;
+            font-size: 14px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background: hsl(0, 0%, 98%);
+            border-bottom: 1px solid hsl(0, 0%, 95%);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        ol {
+            line-height: 2;
+            padding-left: 20px;
+        }
+
+        .wrapper {
+            padding: 10px 50px 50px;
+        }
+
+        .desc {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed hsl(0, 0%, 80%);
+        }
+
+        code {
+            display: inline;
+            padding: 1px 3px;
+            border-radius: 4px;
+            border: 1px solid hsl(0, 0%, 80%);
+            background: hsl(0, 0%, 90%);
+        }
+
+        @media (max-width: 800px) {
+            .child--2 {
+                display: none;
+            }
+        }
+    </style>
+
+    <header>
+        <img src='https://ckeditor.com/docs/assets/img/ckeditor-5.svg'>
+        <h1>CKSource recruitment task</h1>
+    </header>
+
+    <main>
+        <div class='wrapper'>
+
+            <div class='desc'>
+                <h3>Task description</h3>
+
+                <ol>
+                    <li>Center horizontally <code>.parent</code> elements using: flex.</li>
+                    <li>Center vertically <code>.child</code> items.</li>
+                    <li>Move <code>.child2</code> in the beggining of row (1st item) without HTML changes.</li>
+                    <li>Hide <code>.child2</code> when viewport width is smaller than 800px.</li>
+                    <li>It should look like this:</li>
+                </ol>
+                <img
+                    src='https://user-images.githubusercontent.com/10219857/83429719-bfb84280-a434-11ea-91c9-6120ff188680.png'>
+            </div>
+
+            <div class="parent">
+                <div class="child child--1">child 1</div>
+                <div class="child child--2">child 2</div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

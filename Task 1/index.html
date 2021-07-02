@@ -1,0 +1,229 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Recruitment task - css</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <style>
+        /*
+       * Layout should look like this: https://user-images.githubusercontent.com/10219857/83452890-d02ee400-a459-11ea-86e3-0335af0fe2f1.png.
+       *
+       * Good luck! 🤞🏻
+      */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial';
+            position: relative;
+            font-size: 14px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background: hsl(0, 0%, 98%);
+            border-bottom: 1px solid hsl(0, 0%, 95%);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-header {
+            position: relative;
+            display: flex;
+        }
+
+        .blog-header__tags {
+            width: 30%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+        }
+
+        .blog-header__filter {
+            position: absolute;
+            right: 0;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .blog-header__tags span,
+        .blog-header__filter span {
+            background: hsl(0, 0%, 90%);
+            padding: 8px 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .blog-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 30%;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .blog-list__single {
+            border: 1px solid hsl(0, 0%, 90%);
+            padding-bottom: 15px;
+        }
+
+        h3,
+        p {
+            margin-left: 20px;
+        }
+
+        .blog-list__image {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .blog-list__readmore {
+            border: 2px solid hsl(204, 87%, 57%);
+            border-radius: 5px;
+            margin-left: 20px;
+            text-decoration: none;
+            padding: 5px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .more {
+            display: none;
+        }
+    </style>
+
+    <header>
+        <img src='https://ckeditor.com/docs/assets/img/ckeditor-5.svg'>
+        <h3>Some kind of title</h3>
+    </header>
+
+    <main>
+        <div class='blog-header'>
+            <div class='blog-header__tags'>
+                <span>Tag 1</span>
+                <span>Tag 2</span>
+                <span>Tag 3</span>
+                <span>Tag 4</span>
+            </div>
+            <div class='blog-header__filter'>
+                <span>Filter</span>
+            </div>
+        </div>
+
+        <div class='blog-list'>
+
+
+            <div class="card">
+                <div class='blog-list__single'>
+                    <div class='blog-list__image'>
+                        <img src='https://via.placeholder.com/300x150'>
+                    </div>
+
+                    <div class='blog-list__content'>
+                        <h3>Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet <span class="dots">...</span><span class="more"> enim.
+                                Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                lectus
+                                felis, malesuada ultricies. Curabitur et ligula.</span></p>
+                        <a class='blog-list__readmore' href='#'>Read more</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class='blog-list__single'>
+                    <div class='blog-list__image'>
+                        <img src='https://via.placeholder.com/300x150'>
+                    </div>
+
+                    <div class='blog-list__content'>
+                        <h3>Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet <span class="dots">...</span><span class="more"> enim. Etiam
+                                ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus
+                                felis, malesuada ultricies. Curabitur et ligula.</span></p>
+                        <a class='blog-list__readmore' href='#'>Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class='blog-list__single'>
+                    <div class='blog-list__image'>
+                        <img src='https://via.placeholder.com/300x150'>
+                    </div>
+
+                    <div class='blog-list__content'>
+                        <h3>Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet <span class="dots">...</span> <span class="more"> enim.
+                                Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                lectus
+                                felis, malesuada ultricies. Curabitur et ligula.</span></p>
+                        <a class='blog-list__readmore' href='#'>Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class='blog-list__single'>
+                    <div class='blog-list__image'>
+                        <img src='https://via.placeholder.com/300x150'>
+                    </div>
+
+                    <div class='blog-list__content'>
+                        <h3>Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet <span class="dots">...</span><span class="more"> enim.
+                                Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                lectus
+                                felis, malesuada ultricies. Curabitur et ligula.</span></p>
+                        <a class='blog-list__readmore' href='#'>Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class='blog-list__single'>
+                    <div class='blog-list__image'>
+                        <img src='https://via.placeholder.com/300x150'>
+                    </div>
+
+                    <div class='blog-list__content'>
+                        <h3>Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet <span class="dots">...</span><span class="more"> enim.
+                                Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+                                lectus
+                                felis, malesuada ultricies. Curabitur et ligula.</span></p>
+                        <a class='blog-list__readmore' href='#'>Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

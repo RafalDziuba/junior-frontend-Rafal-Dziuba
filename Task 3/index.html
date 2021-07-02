@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Recruitment task - counter</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial';
+            position: relative;
+            font-size: 14px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background: hsl(0, 0%, 98%);
+            border-bottom: 1px solid hsl(0, 0%, 95%);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .buttons-row {
+            margin: 50px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .buttons-row button {
+            cursor: pointer;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid hsl(152, 66%, 50%);
+            background: hsl(152, 66%, 95%);
+            border-radius: 5px;
+            transition: 200ms ease background;
+        }
+
+        .buttons-row button:hover,
+        .buttons-row button:focus {
+            background: hsl(152, 66%, 85%);
+        }
+    </style>
+
+    <header>
+        <img src='https://ckeditor.com/docs/assets/img/ckeditor-5.svg'>
+        <h1>CKSource recruitment task</h1>
+    </header>
+
+    <main>
+        <div class='buttons-row'>
+
+            <button id="counter">Counter value:
+                <span id="counter-value">0</span>
+            </button>
+
+            <button id="reset">Reset counter</button>
+        </div>
+    </main>
+
+    <script>
+        /*
+         * 1. Click on #counter should increment value.
+         * 2. If value is bigger than 5 it should stop incrementing value.
+         * 3. Click on #reset should reset counter button value.
+         * Good luck!
+         */
+        document.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM loaded');
+        });
+
+        let counterBtn = document.querySelector('#counter');
+        let counterValue = document.querySelector('#counter-value');
+        let resetBtn = document.querySelector('#reset');
+        let count = 0;
+
+        counterBtn.addEventListener('click', () => {
+            if (counterValue.innerHTML < 5) {
+                count++
+                counterValue.innerHTML = count;
+            }
+        })
+
+        resetBtn.addEventListener('click', () => {
+            counterValue.innerHTML = 0;
+        })
+    </script>
+</body>
+
+</html>
